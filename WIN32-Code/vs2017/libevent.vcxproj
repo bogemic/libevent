@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\bufferevent-internal.h" />
+    <ClInclude Include="..\changelist-internal.h" />
+    <ClInclude Include="..\defer-internal.h" />
+    <ClInclude Include="..\epolltable-internal.h" />
+    <ClInclude Include="..\evbuffer-internal.h" />
+    <ClInclude Include="..\event-internal.h" />
+    <ClInclude Include="..\evmap-internal.h" />
+    <ClInclude Include="..\evrpc-internal.h" />
+    <ClInclude Include="..\evsignal-internal.h" />
+    <ClInclude Include="..\evthread-internal.h" />
+    <ClInclude Include="..\ht-internal.h" />
+    <ClInclude Include="..\http-internal.h" />
+    <ClInclude Include="..\iocp-internal.h" />
+    <ClInclude Include="..\ipv6-internal.h" />
+    <ClInclude Include="..\kqueue-internal.h" />
+    <ClInclude Include="..\log-internal.h" />
+    <ClInclude Include="..\minheap-internal.h" />
+    <ClInclude Include="..\mm-internal.h" />
+    <ClInclude Include="..\openssl-compat.h" />
+    <ClInclude Include="..\ratelim-internal.h" />
+    <ClInclude Include="..\strlcpy-internal.h" />
+    <ClInclude Include="..\time-internal.h" />
+    <ClInclude Include="..\util-internal.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\buffer.c" />
+    <ClCompile Include="..\bufferevent.c" />
+    <ClCompile Include="..\bufferevent_async.c" />
+    <ClCompile Include="..\bufferevent_filter.c" />
+    <ClCompile Include="..\bufferevent_openssl.c" />
+    <ClCompile Include="..\bufferevent_pair.c" />
+    <ClCompile Include="..\bufferevent_ratelim.c" />
+    <ClCompile Include="..\bufferevent_sock.c" />
+    <ClCompile Include="..\buffer_iocp.c" />
+    <ClCompile Include="..\devpoll.c" />
+    <ClCompile Include="..\evdns.c" />
+    <ClCompile Include="..\event.c" />
+    <ClCompile Include="..\event_iocp.c" />
+    <ClCompile Include="..\event_tagging.c" />
+    <ClCompile Include="..\evmap.c" />
+    <ClCompile Include="..\evport.c" />
+    <ClCompile Include="..\evrpc.c" />
+    <ClCompile Include="..\evthread.c" />
+    <ClCompile Include="..\evthread_win32.c" />
+    <ClCompile Include="..\evutil.c" />
+    <ClCompile Include="..\evutil_rand.c" />
+    <ClCompile Include="..\evutil_time.c" />
+    <ClCompile Include="..\http.c" />
+    <ClCompile Include="..\kqueue.c" />
+    <ClCompile Include="..\listener.c" />
+    <ClCompile Include="..\log.c" />
+    <ClCompile Include="..\poll.c" />
+    <ClCompile Include="..\select.c" />
+    <ClCompile Include="..\signal.c" />
+    <ClCompile Include="..\strlcpy.c" />
+    <ClCompile Include="..\win32select.c" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{D146CC36-E670-4819-BD91-F5309012E6AE}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libevent</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SDK_PATH)\libevent\win32-code\nmake;$(SDK_PATH)\libevent\include;$(SDK_PATH)\libevent\compat;$(SDK_PATH)\openssl_bin64\include;$(IncludePath)</IncludePath>
+    <IntDir>$(BUILDTMP)\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>.\bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SDK_PATH)\libevent\win32-code\nmake;$(SDK_PATH)\libevent\include;$(SDK_PATH)\libevent\compat;$(SDK_PATH)\openssl_bin32\include;$(IncludePath)</IncludePath>
+    <IntDir>$(BUILDTMP)\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>.\bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SDK_PATH)\libevent\win32-code\nmake;$(SDK_PATH)\libevent\include;$(SDK_PATH)\libevent\compat;$(SDK_PATH)\openssl_bin32\include;$(IncludePath)</IncludePath>
+    <IntDir>$(BUILDTMP)\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>.\bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SDK_PATH)\libevent\win32-code\nmake;$(SDK_PATH)\libevent\include;$(SDK_PATH)\libevent\compat;$(SDK_PATH)\openssl_bin64\include;$(IncludePath)</IncludePath>
+    <IntDir>$(BUILDTMP)\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>.\bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

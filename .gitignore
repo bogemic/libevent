@@ -84,9 +84,6 @@ cscope*
 /stamp-h1
 /stamp-h2
 
-/include/event2/event-config.h
-/evconfig-private.h
-
 /sample/dns-example
 /sample/event-read-fifo
 /sample/hello-world
@@ -137,9 +134,6 @@ cscope*
 /event.dir
 /event_core.dir
 /event_extra.dir
-*.vcxproj
-*.sln
-*.filters
 
 # make dist
 /COPYING
